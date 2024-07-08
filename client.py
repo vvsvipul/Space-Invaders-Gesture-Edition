@@ -167,7 +167,7 @@ def final_screen(text):
     screen.blit(temp,(200,200))
 
 def single_player(max_score):
-    pygame.init()
+    # pygame.init()
     accumulated_time=0
     n=0
     running=True
@@ -450,7 +450,9 @@ while running:
                     single_player(100000)
                 if opt==1:
                     multi_player()
-                break
+                else:
+                    running=False
+                    break
         
         draw_selection(opt)
         pygame.display.update()
